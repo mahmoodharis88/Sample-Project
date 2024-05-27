@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DummyProject</string>
+    <string name="trending">Trending</string>
+    <string name="something_went_wrong">Something went wrong...</string>
+    <string name="an_alien_probably_blocking_your_signal">An Alien probably blocking your signal</string>
+    <string name="retry">Retry</string>
+</resources>

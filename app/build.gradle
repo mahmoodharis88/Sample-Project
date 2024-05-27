@@ -1,0 +1,233 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk 31
+   // buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.dummyproject"
+        minSdkVersion 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+ext {
+    kotlin_version = '1.5.0'
+    kotx_version = '1.7.0'
+    appcompat_version = '1.4.1'
+    material_version = '1.5.0'
+    constraintlayout_version = '2.1.3'
+    junit_version = "4.13.2"
+    test_junit_version = "1.1.3"
+    espresso_version = "3.4.0"
+    sdp_version = "1.0.6"
+    support_version = "1.0.0"
+    truth_version = '1.1.3'
+    fragment_version = '2.4.2'
+//    otp_version = "1.4.4"
+//    otp_view = "v1.1.2"
+    circle_imageview_version = "3.1.0"
+//    switch_button_version = "1.2.2"
+    coroutines_version = '1.6.1-native-mt'
+    retrofit_version = "2.9.0"
+    gson_version = '2.9.0'
+    okhttp_version = '5.0.0-alpha.7'
+    core_ktx_version = '1.7.0'
+    collection_ktx_version = '1.2.0'
+    viewmodel_ktx_version = '2.4.1'
+    fragment_ktx_version = '1.4.1'
+    navigation_ktx_version = '2.4.2'
+    multidex_version = "2.0.1"
+    playservices_version = '18.0.1'
+    playservices_version_task = '18.0.1'
+    hilt_version = '2.41'
+    datastore_version = '1.0.0'
+    expandableLayout_version = '2.9.2'
+    rating_version = '1.5.1'
+    coil_version = '1.3.2'
+    easypermission_version = '3.0.0'
+    image_compression_version = '3.0.1'
+    cropping_version = '2.2.6'
+    chuck_version = '3.4.0'
+    crypto_version = '1.0.0'
+    security_version = '1.0.0-alpha02'
+    shared_preference_version = '1.1.1'
+    paging_version = '3.1.1'
+    lottie_version = '4.2.0'
+    chuck_version = '3.5.2'
+
+}
+
+dependencies {
+
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$kotx_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.legacy:legacy-support-v4:$support_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$fragment_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+
+    // dp and sp
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
+    implementation "com.intuit.ssp:ssp-android:$sdp_version"
+
+    //OTP view
+//    implementation "com.chaos.view:pinview:$otp_version"
+//    implementation "com.github.aabhasr1:OtpView:$otp_view"
+
+    //circle ImageView
+    implementation "de.hdodenhof:circleimageview:$circle_imageview_version"
+
+    implementation 'com.github.jrizani:JRSpinner:androidx-SNAPSHOT'
+
+    //country code picker
+//    implementation 'com.github.skydoves:powerspinner:1.1.7'
+//    implementation 'com.github.darshan-miskin:PinView-Android:v1.1.8'
+
+    //swtich Button
+//    implementation "com.rm:rmswitch:$switch_button_version"
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+    //kotlin ktx core
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+
+    //kotlin ktx collection
+    implementation "androidx.collection:collection-ktx:$collection_ktx_version"
+
+    //fragment ktx
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    //lifecycle ktx
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$viewmodel_ktx_version"
+
+    //livedata ktx
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$viewmodel_ktx_version"
+
+    //view model ktx
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_ktx_version"
+
+    //navigation ktx
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation_ktx_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_ktx_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_ktx_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+    // gson
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    //okhttp
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    //multidex
+    implementation "androidx.multidex:multidex:$multidex_version"
+
+    // google play services
+//    implementation "com.google.android.gms:play-services-base:$playservices_version"
+//    implementation "com.google.android.gms:play-services-basement:$playservices_version"
+//    implementation "com.google.android.gms:play-services-tasks:$playservices_version_task"
+
+    // dagger - hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation 'androidx.test.espresso:espresso-contrib:3.4.0'
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+
+    // DataStore
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
+    // ExpandableLayout
+    implementation "com.github.cachapa:ExpandableLayout:$expandableLayout_version"
+
+    //rating bar library
+    implementation "com.github.ome450901:SimpleRatingBar:$rating_version"
+
+    //coil image loader library
+    implementation("io.coil-kt:coil:$coil_version")
+
+    //easy permission
+    implementation "pub.devrel:easypermissions:$easypermission_version"
+
+
+    //image compression library
+    implementation "id.zelory:compressor:$image_compression_version"
+
+    //cropping library
+    implementation "com.github.yalantis:ucrop:$cropping_version"
+
+    implementation("androidx.paging:paging-runtime-ktx:$paging_version")
+    implementation "androidx.paging:paging-common-ktx:$paging_version"
+
+
+    //chuck library
+    debugImplementation "com.github.chuckerteam.chucker:library:$chuck_version"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:$chuck_version"
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    // Room component
+    implementation 'androidx.room:room-runtime:2.3.0'
+    kapt 'androidx.room:room-compiler:2.3.0'
+    implementation 'androidx.room:room-ktx:2.3.0'
+    androidTestImplementation 'androidx.room:room-testing:2.3.0'
+
+
+
+    /** Testing Libraries */
+
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation 'io.mockk:mockk:1.12.4'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
+    testImplementation "com.google.truth:truth:$truth_version"
+
+    // Optional -- Robolectric environment
+    testImplementation 'org.robolectric:robolectric:4.8.1'
+    testImplementation 'androidx.test:core:1.4.0'
+//    androidTestImplementation "org.robolectric:robolectric:4.6.1"
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:4.5.1'
+
+    testImplementation 'org.mockito:mockito-inline:4.5.1'
+    debugImplementation "androidx.test:core:1.4.0"
+
+}

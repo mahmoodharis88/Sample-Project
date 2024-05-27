@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#00568A</color>
+    <color name="light_blue">#F4FAFE</color>
+    <color name="light_red">#FFF4F6</color>
+
+    <color name="gray">#3A3A3C</color>
+    <color name="tab_inactive">#7E7E7E</color>
+    <color name="ripple_color">#B3B3B3</color>
+    <color name="light_gray">#707683</color>
+    <color name="strok_color">#A1A1A1</color>
+    <color name="greenish">#009B94</color>
+
+    <color name="light_greenish">#D9F5F3</color>
+    <color name="red">#B00020</color>
+    <color name="slightly_gray">#F6F6F6</color>
+    <color name="background_color">#E5E5E5</color>
+
+    <color name="dark_green">#0C3F3C</color>
+    <color name="light_green">#2ED47A</color>
+    <color name="orange">#FFB923</color>
+
+    <color name="yellow">#FFB923</color>
+    <color name="canvas__default__background_color">#f8f5f4</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_blue">#192A3E</color>
+
+
+</resources>
